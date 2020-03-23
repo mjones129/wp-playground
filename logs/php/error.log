@@ -1,0 +1,28 @@
+[23-Mar-2020 09:53:47 UTC] PHP Fatal error:  Uncaught Error: Call to undefined function the_exerpt() in /home/matt/Local Sites/fictional-university/app/public/wp-content/themes/fictional-university-theme/index.php:29
+Stack trace:
+#0 /home/matt/Local Sites/fictional-university/app/public/wp-includes/template-loader.php(98): include()
+#1 /home/matt/Local Sites/fictional-university/app/public/wp-blog-header.php(19): require_once('/home/matt/Loca...')
+#2 /home/matt/Local Sites/fictional-university/app/public/index.php(17): require('/home/matt/Loca...')
+#3 {main}
+  thrown in /home/matt/Local Sites/fictional-university/app/public/wp-content/themes/fictional-university-theme/index.php on line 29
+[23-Mar-2020 10:00:32 UTC] PHP Parse error:  syntax error, unexpected '.20' (T_DNUMBER) in /home/matt/Local Sites/fictional-university/app/public/wp-content/themes/fictional-university-theme/index.php on line 25
+[23-Mar-2020 10:01:23 UTC] PHP Parse error:  syntax error, unexpected '.20' (T_DNUMBER) in /home/matt/Local Sites/fictional-university/app/public/wp-content/themes/fictional-university-theme/index.php on line 25
+[23-Mar-2020 10:01:25 UTC] PHP Parse error:  syntax error, unexpected '.20' (T_DNUMBER) in /home/matt/Local Sites/fictional-university/app/public/wp-content/themes/fictional-university-theme/index.php on line 25
+[23-Mar-2020 10:01:30 UTC] PHP Warning:  Use of undefined constant News - assumed 'News' (this will throw an Error in a future version of PHP) in /home/matt/Local Sites/fictional-university/app/public/wp-content/themes/fictional-university-theme/index.php on line 25
+[23-Mar-2020 10:01:30 UTC] PHP Stack trace:
+[23-Mar-2020 10:01:30 UTC] PHP   1. {main}() /home/matt/Local Sites/fictional-university/app/public/index.php:0
+[23-Mar-2020 10:01:30 UTC] PHP   2. require() /home/matt/Local Sites/fictional-university/app/public/index.php:17
+[23-Mar-2020 10:01:30 UTC] PHP   3. require_once() /home/matt/Local Sites/fictional-university/app/public/wp-blog-header.php:19
+[23-Mar-2020 10:01:30 UTC] PHP   4. include() /home/matt/Local Sites/fictional-university/app/public/wp-includes/template-loader.php:98
+[23-Mar-2020 10:02:54 UTC] PHP Warning:  Use of undefined constant News - assumed 'News' (this will throw an Error in a future version of PHP) in /home/matt/Local Sites/fictional-university/app/public/wp-content/themes/fictional-university-theme/index.php on line 25
+[23-Mar-2020 10:02:54 UTC] PHP Stack trace:
+[23-Mar-2020 10:02:54 UTC] PHP   1. {main}() /home/matt/Local Sites/fictional-university/app/public/index.php:0
+[23-Mar-2020 10:02:54 UTC] PHP   2. require() /home/matt/Local Sites/fictional-university/app/public/index.php:17
+[23-Mar-2020 10:02:54 UTC] PHP   3. require_once() /home/matt/Local Sites/fictional-university/app/public/wp-blog-header.php:19
+[23-Mar-2020 10:02:54 UTC] PHP   4. include() /home/matt/Local Sites/fictional-university/app/public/wp-includes/template-loader.php:98
+[23-Mar-2020 10:06:44 UTC] PHP Warning:  Use of undefined constant News - assumed 'News' (this will throw an Error in a future version of PHP) in /home/matt/Local Sites/fictional-university/app/public/wp-content/themes/fictional-university-theme/index.php on line 25
+[23-Mar-2020 10:06:44 UTC] PHP Stack trace:
+[23-Mar-2020 10:06:44 UTC] PHP   1. {main}() /home/matt/Local Sites/fictional-university/app/public/index.php:0
+[23-Mar-2020 10:06:44 UTC] PHP   2. require() /home/matt/Local Sites/fictional-university/app/public/index.php:17
+[23-Mar-2020 10:06:44 UTC] PHP   3. require_once() /home/matt/Local Sites/fictional-university/app/public/wp-blog-header.php:19
+[23-Mar-2020 10:06:44 UTC] PHP   4. include() /home/matt/Local Sites/fictional-university/app/public/wp-includes/template-loader.php:98
