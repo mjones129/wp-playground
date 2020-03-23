@@ -51,6 +51,14 @@
     </div>
   </footer>
 
+  <script src="https://bibles.org/static/widget/v2/widget.js"></script>
+<script>
+    GLOBALBIBLE.init({
+        url: "https://bibles.org",
+        bible: "555fef9a6cb31151-01",
+    });
+</script>
+
 <?php wp_footer(); ?>
 </body>
 </html>
