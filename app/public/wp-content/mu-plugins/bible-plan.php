@@ -2,6 +2,7 @@
 
 function bible_reading_plan() {
   register_post_type('bible-plan', array(
+    'supports' => array('title', 'editor', 'excerpt'),
     'has_archive' => true,
     'public' => true,
     'labels' => array(

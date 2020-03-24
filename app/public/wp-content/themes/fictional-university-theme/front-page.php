@@ -13,24 +13,34 @@
   <div class="full-width-split group">
     <div class="full-width-split__one">
       <div class="full-width-split__inner">
-        <h2 class="headline headline--small-plus t-center">Upcoming Events</h2>
+        <h2 class="headline headline--small-plus t-center">Bible Plan</h2>
 
         <?php
           $homepageBiblePlan = new WP_Query(array(
-            'posts_per_page' => 2,
-            'post_type' => 'bible-plan'
+            'posts_per_page' => -1,
+            'post_type' => 'bible-plan',
+            'meta_key' => 'bible_reading_plan_date',
+            'order-by' => 'meta_value_num',
+            'order' => 'ASC'
           ));
 
           while($homepageBiblePlan->have_posts()) {
             $homepageBiblePlan->the_post(); ?>
             <div class="event-summary">
               <a class="event-summary__date t-center" href="#">
-                <span class="event-summary__month">Mar</span>
-                <span class="event-summary__day">25</span>
+                <span class="event-summary__month"><?php
+                $readingDate = new DateTime(get_field('bible_reading_plan_date'));
+                echo $readingDate->format('M')
+                 ?></span>
+                <span class="event-summary__day"><?php echo $readingDate->format('d') ?></span>
               </a>
               <div class="event-summary__content">
                 <h5 class="event-summary__title headline headline--tiny"><a href="<?php the_permalink(); ?>"><?php the_title(); ?></a></h5>
-                <p><?php echo wp_trim_words(get_the_content(), 18) ?> <a href="<?php the_permalink(); ?>" class="nu gray">Learn more</a></p>
+                <p><?php if (has_excerpt()) {
+                  echo get_the_excerpt();
+                } else {
+                  echo wp_trim_words(get_the_content(), 18);
+                }?><a href="<?php the_permalink(); ?>" class="nu gray">Learn more</a></p>
               </div>
             </div>
         <?php } ?>
@@ -38,7 +48,7 @@
 
 
 
-        <p class="t-center no-margin"><a href="#" class="btn btn--blue">View All Events</a></p>
+        <p class="t-center no-margin"><a href="<?php echo get_post_type_archive_link('bible-plan'); ?>" class="btn btn--blue">View Bible Plan</a></p>
 
       </div>
     </div>
@@ -60,7 +70,11 @@
           </a>
           <div class="event-summary__content">
             <h5 class="event-summary__title headline headline--tiny"><a href="<?php the_permalink(); ?>"><?php the_title(); ?></a></h5>
-            <p><?php echo wp_trim_words(get_the_content(), 18); ?> <a href="<?php the_permalink(); ?>" class="nu gray">Read more</a></p>
+            <p><?php if (has_excerpt()) {
+              echo get_the_excerpt();
+            } else {
+              echo wp_trim_words(get_the_content(), 18);
+            }?> <a href="<?php the_permalink(); ?>" class="nu gray">Read more</a></p>
           </div>
         </div>
       <?php } wp_reset_postdata(); ?>
