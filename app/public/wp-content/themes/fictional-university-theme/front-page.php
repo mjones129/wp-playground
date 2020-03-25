@@ -17,7 +17,7 @@
 
         <?php
           $homepageBiblePlan = new WP_Query(array(
-            'posts_per_page' => -1,
+            'posts_per_page' => 2,
             'post_type' => 'bible-plan',
             'meta_key' => 'bible_reading_plan_date',
             'order-by' => 'meta_value_num',
